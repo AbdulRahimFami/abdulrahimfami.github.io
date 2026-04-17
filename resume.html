@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Abdul Resume</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Jost', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+<style>
+progress {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #6b7280; /* gray-500 */
+  border-radius: 9999px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #34d399; /* violet-400 */
+  border-radius: 9999px;
+}
+
+progress::-moz-progress-bar {
+  background-color: #34d399; /* firefox */
+  border-radius: 9999px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+</style>
+
+</head>
+
+<body class="bg-slate-800 font-sans flex flex-col ">
+
+  <nav class="bg-slate-800 flex p-7 text-emerald-500 items-center justify-center gap-20 text-[1.1em]">
+      <a href="#section-1" class="cursor-pointer">About</a>
+      <a href="#section-2" class="cursor-pointer">Projects</a>
+      <a href="#section-4" class="cursor-pointer">Contact</a>
+  </nav>
+  
+
+  <div id="section-1" class="bg-slate-800  flex justify-center items-center">
+    
+      <img class="h-[45em] relative z-10" src="images/profile.png">
+      
+
+      <div class="bg-green-20 text-white text-6xl font-semibold abslute">
+          <p class="text-xl mb-5 text-justify text-slate-400 font-medium mx-2">----- About Me -----</p>
+
+        <h2>Abdul Rahim <br>Fami</h2>
+        <div class="bg-emerald-400 w-[2.1em] mt-2 h-[5px]"></div>
+
+        <p class="text-lg w-[30em] my-5 text-justify text-slate-400 font-medium">Passionate AI and Machine Learning developer with hands-on experience in building intelligent systems and data-driven solutions. Skilled in Python, model development, and data preprocessing. Strong interest in applied AI, automation, and solving real-world problems using machine learning techniques.</p>
+
+        <div id="icons-container" class=" flex gap-8 text-2xl text-emerald-10 mt-7 ">
+            
+          <div id="linked-in-btn" class="text-emerald-500  h-10 rounded-xl flex items-center justify-center cursor-pointer">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+
+            <div id="github-btn" class="text-emerald-500  rounded-xl flex items-center justify-center cursor-pointer">
+              <i class="fa-brands fa-github"></i>
+            </div>
+
+            <div id="instagram-btn" class="text-emerald-500 rounded-xl flex items-center justify-center cursor-pointer">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+        </div>
+
+        <!-- Resume btn -->
+        <button id="resume_btn" class="text-lg font-medium  cursor-pointer px-[0.6em] py-2 border border-emerald-500 text-emerald-500">Download CV 
+          <i class="fa-solid fa-angle-down"></i></button>
+      </div>
+
+  </div>
+
+
+  <!-- Section 2 projects -->
+
+  <div id="section-2" class="bg-slate-700 py-10 flex flex-col  justify-center items-center">
+
+    <p class="text-xl mb-5 text-slate-300 text-center w-[100%]  font-medium ">
+      <button id="project_prev_btn" class="bg-emerald-00 text-white p-2"><i class="fa-solid fa-chevron-left"></i></button>
+      ----- Projects -----
+      <button id="project_next_btn" class="bg-emerald-00 text-white p-2"><i class="fa-solid fa-chevron-right"></i></button>
+    </p>
+    <div class="flex gap-14 justify-center">
+      
+    </div>
+  
+
+    <!-- Card Carousel -->
+
+    <div class="bg-yelow-700 w-full max-w-6xl relative text-slate-200 p-10 h-[30em] overflow-hidden"
+     id="project-card-container">
+
+
+      <div id="project-card" class="card flex w-[70em] min-w-[70em] gap-5 h-[30em] justify-center ">
+
+          <!-- Project Image -->
+          <img src="images/project_images/slr.jpg" class="object-cover h-full "></img>
+
+          <!-- project Descritpion -->
+           <div class=" p-3 flex flex-col gap-5">
+            <h1 class="text-5xl mb-2 font-semibold">Sign Language Recognition Integration in a Video Conferencing Application</h1>
+            <desc class="mb-2 text-lg text-justify text-slate-300">Developed a Flask-based web application enabling real-time peer-to-peer video communication using WebRTC. Integrated machine learning–based detection using TensorFlow and MediaPipe to perform live video stream analysis with low latency. Implemented backend signaling, real-time frame processing, and optimized inference for browser-based deployment.</desc>
+            
+            <div class="flex gap-2 text-emerald-400">
+              <i class="fa-solid fa-tags"></i>
+              <p>Webrtc | Flask | TensorFlow | LSTM</p>
+            </div>
+
+           </div>
+         
+
+      </div>
+
+      <!-- project 2 fed learning -->
+
+      <div id="project-card" class="card flex w-[70em] min-w-[70em] gap-5 h-[30em] justify-center hidden">
+
+          <!-- Project Image -->
+          <img src="images/project_images/fed_learn.jpg" class="object-cover h-full "></img>
+
+          <!-- project Descritpion -->
+           <div class=" p-3 flex flex-col gap-5">
+            <h1 class="text-5xl mb-2 font-semibold">Privacy-Preserving Lung Disease Detection Using Federated Learning on X-ray Images</h1>
+            <desc class="mb-2 text-lg text-justify text-slate-300">Designed and implemented a federated learning framework for lung disease detection, enabling decentralized model training across multiple clients while preserving data privacy. Each client trained a local deep learning model on medical imaging data, and model updates were securely aggregated into a global model without sharing raw data. Integrated the system with a Streamlit web interface for real-time prediction, visualization, and performance monitoring.</desc>
+            <div class="flex gap-2 text-emerald-400">
+              <i class="fa-solid fa-tags"></i>
+              <p>Streamlit | FedAvg | Pytorch | EfficientNet | Healthcare</p>
+            </div>
+
+           </div>
+         
+
+      </div>
+
+      <div id="project-card" class="card flex w-[70em] min-w-[70em] gap-5 h-[30em] justify-center hidden">
+
+          <!-- Project Image -->
+          <img src="images/project_images/soc_analyst.jpg" class="object-cover h-full "></img>
+
+          <!-- project Descritpion -->
+           <div class=" p-3 flex flex-col gap-5">
+            <h1 class="text-5xl mb-2 font-semibold">Intelligent SOC Analyst: RAG-Based Threat Mapping and Response System</h1>
+            <desc class="mb-2 text-lg text-justify text-slate-300">Designed and implemented an AI-powered Security Operations Center (SOC) automation system integrating machine learning–based intrusion detection, Retrieval-Augmented Generation (RAG), and a locally deployed Large Language Model for intelligent alert analysis. The system classifies malicious network traffic, enriches alerts with contextual threat intelligence, maps detected behavior to MITRE ATT&CK tactics and techniques, and generates structured incident summaries with recommended mitigation steps.</desc>
+            <div class="flex gap-2 text-emerald-400">
+              <i class="fa-solid fa-tags"></i>
+              <p>LLM | Generative AI | Network Intrusion | RAG | Mitre Att&ck</p>
+            </div>
+
+           </div>
+         
+
+      </div>
+
+      
+
+    </div>
+
+
+
+  </div>
+
+
+  <!-- section 3 [skills] -->
+
+  <div class="bg-slate-800 py-10">
+          <p class="text-xl  text-center text-slate-400 font-medium pb-10">----- Skills -----</p>
+    
+          <div class="flex justify-center">
+            <div class="grid grid-cols-3 grid-rows-2 gap-2 w-[650px] h-[500px]">
+
+              <div class="border-emerald-600  border-2 flex flex-col gap-3 items-center justify-center">
+                <div class="bg-emerald-600 h-14 text-slate-200 w-14 flex justify-center text-2xl items-center rounded-full">
+                  <i class="fa-solid fa-hexagon-nodes"></i>
+                </div>
+                
+                <p class="text-lg text-emerald-400">Machine Learning</p>
+                <p class=" text-slate-400">Intermediate</p>
+                <progress class="h-1 bg-gray-500 " value="70" max="100"></progress>
+              </div>
+
+              <div class="border-emerald-600  border-2 flex flex-col gap-3 items-center justify-center">
+                <div class="bg-emerald-600 h-14 text-slate-200 w-14 flex justify-center text-2xl items-center rounded-full">
+                  <i class="fa-solid fa-database"></i>
+                </div>
+                
+                <p class="text-lg text-emerald-400">SQL</p>
+                <p class=" text-slate-400">Intermediate</p>
+                <progress class="h-1 bg-gray-500 " value="50" max="100"></progress>
+              </div>
+
+              <div class="border-emerald-600  border-2 flex flex-col gap-3 items-center justify-center">
+                <div class="bg-emerald-600 h-14 text-slate-200 w-14 flex justify-center text-2xl items-center rounded-full">
+                  <i class="fa-solid fa-mug-hot"></i>
+                </div>
+                
+                <p class="text-lg text-emerald-400">Java</p>
+                <p class=" text-slate-400">Beginner</p>
+                <progress class="h-1 bg-gray-500 " value="25" max="100"></progress>
+              </div>
+
+              <div class="border-emerald-600  border-2 flex flex-col gap-3 items-center justify-center">
+                <div class="bg-emerald-600 h-14 text-slate-200 w-14 flex justify-center text-2xl items-center rounded-full">
+                  <i class="fa-solid fa-globe"></i>
+
+                </div>
+                
+                <p class="text-lg text-emerald-400">Web Developing</p>
+                <p class=" text-slate-400">Intermediate</p>
+                <progress class="h-1 bg-gray-500 " value="75" max="100"></progress>
+              </div>
+
+
+              <div class="border-emerald-600  border-2 flex flex-col gap-3 items-center justify-center">
+                <div class="bg-emerald-600 h-14 text-slate-200 w-14 flex justify-center text-2xl items-center rounded-full">
+                  <i class="fa-solid fa-chart-line"></i>
+
+
+                </div>
+                
+                <p class="text-lg text-emerald-400">Data Analysis</p>
+                <p class=" text-slate-400">Intermediate</p>
+                <progress class="h-1 bg-gray-500 " value="65" max="100"></progress>
+              </div>
+              
+
+          </div>
+        </div>
+
+  </div>
+
+  <!-- section 4 contact footer -->
+
+  <div id="section-4" class="bg-slate-700 py-10">
+
+    <p class="text-2xl text-centr px-10  text-slate-200">Contact</p>
+
+    <div class="text-slate-300 flex flex-col items-center justify-center">
+      <p class="text-lg max-w-[40em] p-3 text-justify">I’m always open to discussing new opportunities, innovative projects, and collaborations in AI and software development. If you’d like to connect or work together, feel free to reach out.</p>
+      
+     
+      <div class="space-y-4 text-lg">
+
+        <div class="flex items-center">
+          <i class="fa-regular fa-envelope w-6 text-xl text-emerald-00"></i>
+          <p class="ml-3">abdulrahimfami68@gmail.com</p>
+        </div>
+
+        <div class="flex items-center">
+          <i class="fa-solid fa-phone w-6 text-xl text-emerald-00"></i>
+          <p class="ml-3">+91 9605757804</p>
+        </div>
+
+        <div class="flex items-center">
+          <i class="fa-solid fa-location-dot w-6 text-xl text-emerald-00"></i>
+          <p class="ml-3">Varkala, Trivandrum</p>
+        </div>
+
+      </div>
+
+    </div>
+  
+  </div>
+
+
+
+
+</body>
+
+
+
+<!-- Project container carousel -->
+
+<script src="static/functionality.js"></script>
+
+<script>
+
+const cards = document.querySelectorAll(".card");
+const nextBtn = document.getElementById("project_next_btn");
+const prevBtn = document.getElementById("project_prev_btn");
+
+let index = 0;
+
+function showCard(i) {
+  cards.forEach(card => card.classList.add("hidden"));
+  cards[i].classList.remove("hidden");
+}
+
+nextBtn.addEventListener("click", () => {
+  index = (index + 1) % cards.length;
+  showCard(index);
+});
+
+prevBtn.addEventListener("click", () => {
+  index = (index - 1 + cards.length) % cards.length;
+  showCard(index);
+});
+
+
+  
+
+
+
+
+</script>
+
+
+
+
+</html>
